@@ -193,6 +193,13 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1;letter-spacing
 .latest .report-cover{border-radius:var(--r);max-width:none}
 .lt-body{padding:12px 20px 12px 0}
 .lt-kicker{margin-bottom:12px}
+.lt-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.lt-actions .btn-quiet{margin-left:0}
+@media (max-width:480px){
+  .lt-actions{gap:8px}
+  .lt-actions .btn-primary{padding:11px 18px;font-size:14px;min-height:44px}
+  .lt-actions .btn-quiet{padding:10px 14px;font-size:13px;min-height:44px}
+}
 .latest .lt-title{font-size:clamp(26px,3vw,36px);max-width:22ch;margin-bottom:12px}
 .latest .lede{font-size:16.5px;line-height:1.65;color:var(--ink-2);max-width:56ch;margin-bottom:20px}
 .prev{border-top:1px solid var(--hairline);padding-top:24px}

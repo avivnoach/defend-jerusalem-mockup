@@ -119,7 +119,12 @@ a,button{cursor:pointer}
   color:var(--gold-text);
 }
 .on-dark .kicker{color:var(--gold)}
-h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1;letter-spacing:-.01em}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1;letter-spacing:-.01em;overflow-wrap:break-word}
+
+/* feed-page head (research) */
+.feed-head{padding:56px 0 40px;border-bottom:1px solid var(--hairline)}
+.feed-head h1{font-size:clamp(30px,4.4vw,46px);margin:12px 0 10px}
+.feed-head .dek{font-size:16px;color:var(--ink-2);max-width:56ch}
 .section-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:30px}
 .section-head h2{font-size:clamp(28px,3.4vw,38px)}
 .section-head .more{

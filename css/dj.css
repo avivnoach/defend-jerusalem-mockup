@@ -128,6 +128,11 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1;letter-spacing
   transition:border-color .2s,color .2s,background .2s;
 }
 .section-head .more:hover{color:var(--ink);border-color:var(--ink-3);background:var(--bg-tint)}
+.section-head .more.strong{
+  background:var(--ink);color:#fff;border-color:var(--ink);
+  font-weight:700;padding:11px 22px;box-shadow:var(--shadow-1);
+}
+.section-head .more.strong:hover{background:var(--navy);border-color:var(--navy);color:#fff}
 
 /* ---------- HERO ---------- */
 .hero{
@@ -175,14 +180,8 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1;letter-spacing
 
 /* ---------- RESEARCH DESK (latest widget + previously) ---------- */
 .research{background:var(--bg);padding:80px 0}
-.latest{display:grid;grid-template-columns:minmax(230px,300px) 1.35fr;gap:clamp(28px,4vw,56px);align-items:center;margin-bottom:40px}
-.badge-latest{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--gold-text);background:rgba(138,108,16,.08);border:1px solid rgba(138,108,16,.28);
-  border-radius:var(--pill);padding:6px 14px;margin-bottom:16px;
-}
-.badge-latest::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold);flex:none}
+.latest{display:grid;grid-template-columns:minmax(230px,300px) 1.35fr;gap:clamp(28px,4vw,56px);align-items:center}
+.lt-kicker{margin-bottom:12px}
 .latest .lt-title{font-size:clamp(26px,3vw,36px);max-width:22ch;margin-bottom:12px}
 .latest .lede{font-size:16.5px;line-height:1.65;color:var(--ink-2);max-width:56ch;margin-bottom:20px}
 .prev{border-top:1px solid var(--hairline);padding-top:24px}

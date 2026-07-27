@@ -1,0 +1,31 @@
+<!-- @dsCard group="Components" name="Donation form" subtitle="Frequency toggle, chai presets, labeled fields, honest consent" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Forms — Defend Jerusalem DS</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&family=Archivo:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/dj.css">
+<script defer src="../js/dj.js"></script>
+</head>
+<body style="padding:28px;background:var(--paper)">
+  <form class="give-card" style="max-width:460px" action="#">
+    <h2>Make your gift</h2>
+    <div class="freq" role="group" aria-label="Donation frequency">
+      <button type="button" aria-pressed="true">One-time</button>
+      <button type="button" aria-pressed="false">Monthly</button>
+    </div>
+    <div class="amounts" role="group" aria-label="Choose an amount">
+      <button type="button" class="chai" aria-pressed="false">$36</button>
+      <button type="button" class="chai" aria-pressed="true">$72</button>
+      <button type="button" class="chai" aria-pressed="false">$180</button>
+      <button type="button" aria-pressed="false">$500</button>
+    </div>
+    <div class="custom-amount">
+      <label for="custom">Other amount</label>
+      <div class="field"><span aria-hidden="true">$</span><input id="custom" type="number" min="1" placeholder="0.00"></div>
+    </div>
+    <button class="btn-give-big" type="submit">Give $72</button>
+  </form>
+</body>
+</html>

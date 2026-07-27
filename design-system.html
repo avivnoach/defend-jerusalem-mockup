@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Design system — Defend Jerusalem redesign</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Archivo:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/dj.css">
+</head>
+<body>
+<main class="wrap" style="padding-top:40px;padding-bottom:80px">
+  <p class="kicker">Defend Jerusalem redesign</p>
+  <h1 style="font-size:38px;margin:14px 0 8px">Design system</h1>
+  <p style="color:var(--ink-2);max-width:62ch">"Modern newsroom" — NYT × Instagram: crisp white, hairline
+  grid, image-first cards, pill actions, blur-glass masthead. Editorial serif authority kept (Fraunces);
+  navy &amp; gold demoted to accents; red reserved exclusively for giving.</p>
+
+  <section class="ds-section" aria-labelledby="ds-colors">
+    <h2 id="ds-colors" style="font-size:24px;margin-bottom:18px">Color</h2>
+    <div class="ds-swatches">
+      <div class="ds-swatch"><div class="c" style="background:#121025"></div><div class="l"><b>Ink · #121025</b>Near-black text, primary buttons</div></div>
+      <div class="ds-swatch"><div class="c" style="background:#14112C"></div><div class="l"><b>Navy · #14112C</b>Dark sections, hero</div></div>
+      <div class="ds-swatch"><div class="c" style="background:#1D1940"></div><div class="l"><b>Navy card · #1D1940</b>Cards on dark sections</div></div>
+      <div class="ds-swatch"><div class="c" style="background:#55516E"></div><div class="l"><b>Ink 2 · #55516E</b>Secondary text</div></div>
+      <div class="ds-swatch"><div class="c" style="background:#8A6C10"></div><div class="l"><b>Gold text · #8A6C10</b>Labels &amp; links on white — passes 4.5:1</div></div>
+      <div class="ds-swatch"><div class="c" style="background:#C9A227"></div><div class="l"><b>Gold · #C9A227</b>Accents on navy</div></div>
+      <div class="ds-swatch"><div class="c" style="background:#FFFFFF;border-bottom:1px solid #E8E7EE"></div><div class="l"><b>White · #FFFFFF</b>Page background</div></div>
+      <div class="ds-swatch"><div class="c" style="background:#F7F7F4"></div><div class="l"><b>Tint · #F7F7F4</b>Alternate sections</div></div>
+      <div class="ds-swatch"><div class="c" style="background:#C63A2B"></div><div class="l"><b>Campaign red · #C63A2B</b>Donation actions ONLY</div></div>
+    </div>
+    <p class="ds-note"><b>Rules:</b> red appears nowhere except giving actions. Gold text on white uses
+    #8A6C10 (4.5:1+); bright gold #C9A227 lives on navy. Hairlines #E8E7EE. Media radius 12px, cards 18px,
+    actions are pills. All pairs contrast-checked.</p>
+  </section>
+
+  <section class="ds-section" aria-labelledby="ds-type">
+    <h2 id="ds-type" style="font-size:24px;margin-bottom:8px">Typography</h2>
+    <div class="ds-type-row"><span style="font-family:var(--serif);font-weight:600;font-size:40px">Fraunces 600 — display &amp; headlines</span></div>
+    <div class="ds-type-row"><span style="font-family:var(--serif);font-style:italic;font-size:24px">Fraunces italic — pull quotes, chapter numerals</span></div>
+    <div class="ds-type-row"><span style="font-family:var(--sans);font-size:16px">Archivo 400/500 — body and interface text, 16px minimum</span></div>
+    <div class="ds-type-row"><span class="kicker">Archivo 700 · letterspaced caps — kickers &amp; labels</span></div>
+    <p class="ds-note">Two families, three weights each — nothing else ships.</p>
+  </section>
+
+  <section class="ds-section" aria-labelledby="ds-buttons">
+    <h2 id="ds-buttons" style="font-size:24px;margin-bottom:18px">Buttons</h2>
+    <p style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
+      <a class="btn-give" href="#">Donate</a>
+      <a class="btn-primary" href="#">Start reading</a>
+      <a class="btn-quiet" href="#">Download PDF</a>
+    </p>
+    <div style="background:var(--navy-deep);padding:22px;margin-top:16px;border-radius:4px" class="on-dark">
+      <p style="display:flex;gap:14px;flex-wrap:wrap;align-items:center">
+        <a class="btn-gold" href="#">Start reading</a>
+        <a class="btn-ghost" href="#">Read the latest report</a>
+      </p>
+    </div>
+    <p class="ds-note">Every target ≥44px tall · visible focus ring (gold on navy, gold-text on paper) ·
+    150–250ms transitions only, no entrance animation gates content.</p>
+  </section>
+
+  <section class="ds-section" aria-labelledby="ds-motion" style="border-bottom:none">
+    <h2 id="ds-motion" style="font-size:24px;margin-bottom:10px">Motion &amp; accessibility policy</h2>
+    <ul class="tight" style="max-width:70ch">
+      <li>Content is visible immediately — motion is an accent, never a gate. The hero's one entrance
+      animation runs only under <code>prefers-reduced-motion: no-preference</code>.</li>
+      <li>WCAG AA contrast on every text/background pair; one H1 per page; alt text on all imagery;
+      skip link; keyboard focus visible everywhere.</li>
+      <li>Semantic HTML throughout — headings, nav, main, footer — so search engines and AI assistants
+      can read the site's structure (the GEO baseline).</li>
+    </ul>
+  </section>
+</main>
+</body>
+</html>

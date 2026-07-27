@@ -20,6 +20,44 @@
     if (img.complete && img.naturalWidth === 0) imgFail(img);
   });
 
+  // Relative timestamps — "3 hours ago" feed vibe, computed from real datetimes
+  function relTime(iso) {
+    var then = new Date(iso).getTime();
+    if (isNaN(then)) return null;
+    var mins = Math.round((Date.now() - then) / 60000);
+    if (mins < 1) return "Just now";
+    if (mins < 60) return mins + " min ago";
+    var hrs = Math.round(mins / 60);
+    if (hrs < 24) return hrs + (hrs === 1 ? " hour ago" : " hours ago");
+    var days = Math.round(hrs / 24);
+    if (days === 1) return "Yesterday";
+    if (days < 8) return days + " days ago";
+    return null; // older than a week: keep the printed date
+  }
+  document.querySelectorAll(".news time[datetime*='T']").forEach(function (t) {
+    var rel = relTime(t.getAttribute("datetime"));
+    if (rel) {
+      t.textContent = rel + (t.dataset.suffix ? " · " + t.dataset.suffix : "");
+      t.title = new Date(t.getAttribute("datetime")).toLocaleString();
+    }
+  });
+
+  // Share buttons — native share sheet on phones, copy-link elsewhere
+  document.querySelectorAll(".share").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var url = btn.dataset.url || window.location.href;
+      var title = btn.dataset.title || document.title;
+      if (navigator.share) {
+        navigator.share({ title: title, url: url }).catch(function () {});
+      } else if (navigator.clipboard) {
+        navigator.clipboard.writeText(url).then(function () {
+          btn.setAttribute("data-tip", "Link copied");
+          setTimeout(function () { btn.removeAttribute("data-tip"); }, 1600);
+        });
+      }
+    });
+  });
+
   // Mobile menu
   var btn = document.querySelector(".menu-btn");
   var panel = document.querySelector(".mobile-nav");

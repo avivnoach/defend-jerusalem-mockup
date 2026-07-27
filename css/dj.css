@@ -211,8 +211,8 @@ h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.1;letter-spacing
 .report-cover{
   aspect-ratio:3/4;max-width:360px;border-radius:var(--r-lg);
   background:
-    linear-gradient(155deg, rgba(36,31,82,.82) 0%, rgba(20,17,44,.92) 70%),
-    url('../img/report-cover.jpg') center/cover,
+    linear-gradient(175deg, rgba(20,17,44,.38) 0%, rgba(20,17,44,.30) 45%, rgba(20,17,44,.78) 100%),
+    url('../img/report-cover.jpg?v=3') center/cover,
     linear-gradient(155deg, #241F52 0%, var(--navy) 65%);
   color:#fff;padding:30px 28px;display:flex;flex-direction:column;justify-content:space-between;
   box-shadow:var(--shadow-2);
